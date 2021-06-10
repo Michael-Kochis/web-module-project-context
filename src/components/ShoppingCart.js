@@ -3,10 +3,10 @@ import React from 'react';
 // Components
 import Item from './ShoppingCartItem';
 
-import { useProducts } from '../contexts/ProductContext'
+import { useCart } from '../contexts/cartContext'
 
 const ShoppingCart = () => {
-	const { cart } = useProducts();
+	const { cart } = useCart();
 
 	const getCartTotal = () => {
 		return cart.reduce((acc, value) => {

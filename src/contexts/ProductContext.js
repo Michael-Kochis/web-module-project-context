@@ -9,18 +9,16 @@ function useProducts() {
 
 function ProductProvider(props) {
     const [products, setProducts] = useState(data);
-    const [cart, setCart] = useState([]);
 
-	const addItem = item => {
-		setCart([
-			...cart,
-			item
-		])
-	};
+    const addProduct = item => {
+        setProducts([
+            ...products,
+            item
+        ])
+    }
 
     const value = {
-        addItem,
-        cart,
+        addProduct,
         products
     }
 

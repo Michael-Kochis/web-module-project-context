@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { useProducts } from '../contexts/ProductContext'
+import { useCart } from '../contexts/cartContext'
 
 const Navigation = () => {
-	const { cart } = useProducts();
+	const { cart } = useCart();
 
 	return (
 		<div className="navigation">

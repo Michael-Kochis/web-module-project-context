@@ -1,11 +1,13 @@
 import React from 'react';
 import { useProducts } from '../contexts/ProductContext'
+import { useCart } from '../contexts/cartContext'
 
 // Components
 import Product from './Product';
 
 const Products = () => {
-	const { addItem, products } = useProducts();
+	const { products } = useProducts();
+	const { addItem } = useCart();
 
 	return (
 		<div className="products-container">
